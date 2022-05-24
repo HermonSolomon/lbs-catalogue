@@ -1,16 +1,24 @@
 @use "../abstract/index" as *;
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .content-container {
   position: relative;
   margin: clamp(3rem, 4vw, 10rem) auto;
   padding: 1px 2rem;
   width: 100%;
 
-  &--image {
+  &--bg {
     // background-image: url("../../assets/imgs/culture-page/hermonback.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
+    background-color: #ededf5;
+    padding: 10em;
   }
 
   &--gradient {

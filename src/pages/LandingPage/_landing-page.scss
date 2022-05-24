@@ -1,12 +1,40 @@
 .blob {
-  width: 100%;
+  width: 250%;
   height: 500px;
   position: relative;
   background-repeat: no-repeat;
-  background-image: url("../../assets/global/Hero_illustration.svg");
+
+  // background-image: url("../../assets/global/Hero_illustration.svg");
+  img {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    right: -240px;
+    top: -7rem;
+  }
 }
 
 main {
   .carousel-section {
+    // background-color: #ededf5;
+    padding: 10rem;
+  }
+
+  .blob-second {
+    position: relative;
+    left: -200px;
+  }
+
+  .internal-team-boxes {
+    .boxes {
+      position: relative;
+      height: 240px;
+      background-color: #6659cc;
+      width: 50%;
+      border-radius: 1.5rem;
+    }
+    .box2 {
+      left: 50%;
+    }
   }
 }
