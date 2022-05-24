@@ -1,0 +1,27 @@
+// base styles
+@use "./scss/base/typography";
+@use "./scss/base/page";
+@use "./scss/base/gen-container";
+@use "./scss/base/utility-classes";
+
+// components
+
+// @use "./components/Carousel/carousel";
+@use "./Components/NavBar/_navbar.scss";
+// buttons
+// @use "./components/Buttons/burger-button";
+@use "./components/Buttons/buttons";
+
+// page
+@use "./pages/landingPage/landing-page";
+
+// layouts
+// @use "./layouts/Footer/footer";
+// @use "./layouts/Header/header";
+@use "./layouts/Hero/hero";
+// @use "./layouts/Logo/logo";
+// @use "./layouts/Banner/banner";
+// @use "./components/Home/HomePage.scss";
+// @use './components/Header/Header.scss';
+// @use "./scss/page.scss";
+// @use "./scss/_variables.scss";

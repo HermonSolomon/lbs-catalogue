@@ -1,0 +1,71 @@
+@use "../../scss/abstract/index" as *;
+
+.btn {
+  border: none;
+  @include flex-column();
+  justify-content: center;
+  font-size: clamp(2.4rem, 2vw, 2.8rem);
+  border-radius: 50px;
+
+  &--primary {
+    background: var(--iris);
+    color: var(--text-light);
+    padding: 0.5em 3em;
+    color: white;
+    &:hover {
+      color: white;
+    }
+  }
+
+  &--secondary {
+    background: $light;
+    color: var(--iris);
+    font-size: clamp(1.4rem, 1.2vw, 2rem);
+    line-height: 1.6;
+    padding: 0.8em 2em;
+    font-weight: 900;
+    line-height: 1;
+    &:hover {
+      color: var(--indigo);
+    }
+  }
+
+  &--scroll-top {
+    align-self: center;
+    height: 6rem;
+    @include media(tablet-pt) {
+      align-self: end;
+    }
+    img {
+      height: 100%;
+    }
+  }
+
+  &:hover {
+    text-decoration: underline;
+    opacity: 0.9;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &__circle {
+    padding: 0.5rem;
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+.large-button {
+  width: 15rem;
+  margin-bottom: 2rem;
+  &__title {
+    font-size: clamp(2.4rem, 2vw, 2.8rem);
+    line-height: 2.8rem;
+    font-weight: bold;
+    width: 12ch;
+  }
+}
