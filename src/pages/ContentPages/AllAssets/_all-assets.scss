@@ -1,0 +1,18 @@
+.asset-list {
+  @include flex();
+  .result-items {
+    width: 100%;
+    max-width: var(--card-width);
+    min-height: 300px;
+    margin-bottom: 2.5rem;
+    margin-left: 5px;
+    background-repeat: no-repeat;
+    background-size: 160px auto;
+    background-position: center 6px;
+    border-radius: 7px;
+    background: transparent;
+    box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.2),
+      -8px -8px 18px 0 rgba(255, 255, 255, 0.55);
+    overflow: hidden;
+  }
+}

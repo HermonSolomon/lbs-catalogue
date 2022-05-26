@@ -664,5 +664,323 @@
       "downloadLink": "",
       "thumbnail": "lib/imgs/tileQuizThumb.jpg"
     }
-  ]
+  ],
+  "characters": [
+    {
+  "id": "CH_001",
+  "name": "Alex",
+  "age": "21-35",
+  "description": "As Every Second Matters, but with multiple, randomised questions for each answer.",
+  "type": "graphic",
+  "keywords": [
+   "hotspot",
+   "lbs",
+   "dotnative",
+   "Bitesize"
+  ],
+  "appearsIn": [
+   "GD_001",
+   "GD_002",
+   "GD_003",
+   "CI_002",
+   "GD_004",
+   "GD_005",
+   "GD_006",
+   "CI_007"
+  ],
+  "assetHistory": [{
+    "product": "Marketing Academy M1",
+    "role": "Manager at Brockfield Ltd",
+    "link": "https://www.google.co.uk/"
+   },
+   {
+    "product": "Marketing Academy M1",
+    "role": "Manager at Brockfield Ltd",
+    "link": "https://www.google.co.uk/"
+   }
+  ],
+  "url": "https://campus.avadolearning.com",
+  "thumbnail": "lib/imgs/CharacterLib/Alex.svg"
+ },
+ {
+  "id": "CH_002",
+  "name": "Alice",
+  "age": "21-35",
+  "title": "Randomized tile quiz",
+  "description": "As Every Second Matters, but with multiple, randomised questions for each answer.",
+  "type": "graphic",
+  "daysToBuild": 10,
+  "keywords": [
+   "hotspot",
+   "data",
+   "dotnative",
+   "Bitesize"
+  ],
+  "appearsIn": [
+   "GD_001"
+  ],
+  "assetHistory": [{
+    "product": "Marketing Academy M1",
+    "role": "Manager at Brockfield Ltd",
+    "link": "https://www.google.co.uk/"
+   },
+   {
+    "product": "Marketing Academy M1",
+    "role": "Manager at Brockfield Ltd",
+    "link": "https://www.google.co.uk/"
+   }
+  ],
+  "url": "https://campus.avadolearning.com",
+  "thumbnail": "lib/imgs/CharacterLib/Alice.svg"
+ },
+ {
+  "id": "CH_003",
+  "name": "Richa",
+  "age": "21-35",
+  "title": "Randomized tile quiz",
+  "description": "As Every Second Matters, but with multiple, randomised questions for each answer.",
+  "type": "graphic",
+  "daysToBuild": 10,
+  "keywords": [
+   "hotspot",
+   "data",
+   "dotnative",
+   "Bitesize"
+  ],
+  "appearsIn": [
+   "GD_001"
+  ],
+  "assetHistory": [{
+    "product": "Marketing Academy M1",
+    "role": "Manager at Brockfield Ltd",
+    "link": "https://www.google.co.uk/"
+   },
+   {
+    "product": "Marketing Academy M1",
+    "role": "Manager at Brockfield Ltd",
+    "link": "https://www.google.co.uk/"
+   }
+  ],
+  "url": "https://campus.avadolearning.com",
+  "thumbnail": "lib/imgs/CharacterLib/Richa.svg"
+ },
+ {
+  "id": "CH_004",
+  "name": "Sunny",
+  "age": "21-35",
+  "title": "Randomized tile quiz",
+  "description": "As Every Second Matters, but with multiple, randomised questions for each answer.",
+  "type": "graphic",
+  "daysToBuild": 10,
+  "keywords": [
+   "hotspot",
+   "data",
+   "dotnative",
+   "Bitesize"
+  ],
+  "appearsIn": [
+   "GD_001"
+  ],
+  "assetHistory": [{
+    "product": "Marketing Academy M1",
+    "role": "Manager at Brockfield Ltd",
+    "link": "https://www.google.co.uk/"
+   },
+   {
+    "product": "Marketing Academy M1",
+    "role": "Manager at Brockfield Ltd",
+    "link": "https://www.google.co.uk/"
+   }
+  ],
+  "url": "https://campus.avadolearning.com",
+  "thumbnail": "lib/imgs/CharacterLib/Sunny.svg"
+ },
+ {
+  "id": "CH_005",
+  "name": "Uzma",
+  "age": "21-35",
+  "title": "Randomized tile quiz",
+  "description": "As Every Second Matters, but with multiple, randomised questions for each answer.",
+  "type": "graphic",
+  "daysToBuild": 10,
+  "keywords": [
+   "hotspot",
+   "data",
+   "dotnative",
+   "Bitesize"
+  ],
+  "appearsIn": [
+   "GD_001"
+  ],
+  "assetHistory": [{
+    "product": "Marketing Academy M1",
+    "role": "Manager at Brockfield Ltd",
+    "link": "https://www.google.co.uk/"
+   },
+   {
+    "product": "Marketing Academy M1",
+    "role": "Manager at Brockfield Ltd",
+    "link": "https://www.google.co.uk/"
+   }
+  ],
+  "url": "https://campus.avadolearning.com",
+  "thumbnail": "lib/imgs/CharacterLib/Uzma.svg"
+ },
+ {
+  "id": "CH_006",
+  "name": "Winona",
+  "age": "21-35",
+  "title": "Randomized tile quiz",
+  "description": "As Every Second Matters, but with multiple, randomised questions for each answer.",
+  "type": "graphic",
+  "daysToBuild": 10,
+  "keywords": [
+   "hotspot",
+   "data",
+   "dotnative",
+   "Bitesize"
+  ],
+  "appearsIn": [
+   "GD_001"
+  ],
+  "assetHistory": [{
+    "product": "Marketing Academy M1",
+    "role": "Manager at Brockfield Ltd",
+    "link": "https://www.google.co.uk/"
+   },
+   {
+    "product": "Marketing Academy M1",
+    "role": "Manager at Brockfield Ltd",
+    "link": "https://www.google.co.uk/"
+   }
+  ],
+  "url": "https://campus.avadolearning.com",
+  "thumbnail": "lib/imgs/CharacterLib/Winona.svg"
+ },
+ {
+  "id": "CH_007",
+  "name": "Zilong",
+  "age": "21-35",
+  "title": "Randomized tile quiz",
+  "description": "As Every Second Matters, but with multiple, randomised questions for each answer.",
+  "type": "graphic",
+  "daysToBuild": 10,
+  "keywords": [
+   "hotspot",
+   "data",
+   "dotnative",
+   "Bitesize"
+  ],
+  "appearsIn": [
+   "GD_001"
+  ],
+  "assetHistory": [{
+    "product": "Marketing Academy M1",
+    "role": "Manager at Brockfield Ltd",
+    "link": "https://www.google.co.uk/"
+   },
+   {
+    "product": "Marketing Academy M1",
+    "role": "Manager at Brockfield Ltd",
+    "link": "https://www.google.co.uk/"
+   }
+  ],
+  "url": "https://campus.avadolearning.com",
+  "thumbnail": "lib/imgs/CharacterLib/Zilong.svg"
+ },
+ {
+  "id": "CH_008",
+  "name": "Henry",
+  "age": "21-35",
+  "title": "Randomized tile quiz",
+  "description": "As Every Second Matters, but with multiple, randomised questions for each answer.",
+  "type": "graphic",
+  "daysToBuild": 10,
+  "keywords": [
+   "hotspot",
+   "data",
+   "dotnative",
+   "Bitesize"
+  ],
+  "appearsIn": [
+   "GD_001"
+  ],
+  "assetHistory": [{
+    "product": "Marketing Academy M1",
+    "role": "Manager at Brockfield Ltd",
+    "link": "https://www.google.co.uk/"
+   },
+   {
+    "product": "Marketing Academy M1",
+    "role": "Manager at Brockfield Ltd",
+    "link": "https://www.google.co.uk/"
+   }
+  ],
+  "url": "https://campus.avadolearning.com",
+  "thumbnail": "lib/imgs/CharacterLib/Henry.svg"
+ },
+ {
+  "id": "CH_009",
+  "name": "Paul",
+  "age": "21-35",
+  "title": "Randomized tile quiz",
+  "description": "As Every Second Matters, but with multiple, randomised questions for each answer.",
+  "type": "graphic",
+  "daysToBuild": 10,
+  "keywords": [
+   "hotspot",
+   "data",
+   "dotnative",
+   "Bitesize"
+  ],
+  "appearsIn": [
+   "GD_001"
+  ],
+  "assetHistory": [{
+    "product": "Marketing Academy M1",
+    "role": "Manager at Brockfield Ltd",
+    "link": "https://www.google.co.uk/"
+   },
+   {
+    "product": "Marketing Academy M1",
+    "role": "Manager at Brockfield Ltd",
+    "link": "https://www.google.co.uk/"
+   }
+  ],
+  "url": "https://campus.avadolearning.com",
+  "thumbnail": "lib/imgs/CharacterLib/Paul.svg"
+ },
+ {
+  "id": "CH_010",
+  "name": "Sasha",
+  "age": "21-35",
+  "title": "Randomized tile quiz",
+  "description": "As Every Second Matters, but with multiple, randomised questions for each answer.",
+  "type": "graphic",
+  "daysToBuild": 10,
+  "keywords": [
+   "hotspot",
+   "data",
+   "dotnative",
+   "Bitesize"
+  ],
+  "appearsIn": [
+   "GD_001"
+  ],
+  "assetHistory": [{
+    "product": "Marketing Academy M1",
+    "role": "Manager at Brockfield Ltd",
+    "link": "https://www.google.co.uk/"
+   },
+   {
+    "product": "Marketing Academy M1",
+    "role": "Manager at Brockfield Ltd",
+    "link": "https://www.google.co.uk/"
+   }
+  ],
+  "url": "https://campus.avadolearning.com",
+  "thumbnail": "lib/imgs/CharacterLib/Sasha.svg"
+ }
+]
+  
 }
