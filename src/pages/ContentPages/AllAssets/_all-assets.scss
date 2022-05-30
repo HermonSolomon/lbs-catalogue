@@ -1,8 +1,22 @@
+@use "../../../scss/abstract/index" as *;
+
+:root {
+  --card-width: 300px;
+}
+
 .asset-list {
-  @include flex();
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
+  max-width: 1100px;
+
   .result-items {
     width: 100%;
-    max-width: var(--card-width);
+    max-width: 300px;
     min-height: 300px;
     margin-bottom: 2.5rem;
     margin-left: 5px;
@@ -14,5 +28,87 @@
     box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.2),
       -8px -8px 18px 0 rgba(255, 255, 255, 0.55);
     overflow: hidden;
+
+    .thumbnail {
+      position: relative;
+      width: 100%;
+      height: calc(var(--card-width) / (4 / 3));
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+      .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        .middle {
+          transition: 0.5s ease;
+          opacity: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          text-align: center;
+          z-index: 5;
+        }
+      }
+
+      .overlay {
+        .middle {
+          transition: 0.5s ease;
+          opacity: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          text-align: center;
+          z-index: 5;
+
+          &:hover {
+            // background-color: white;
+            color: var(--indigo);
+            opacity: 1;
+          }
+          .view-btn,
+          .download-btn {
+            background-color: transparent;
+            border: solid 2px white;
+            color: white;
+            padding: 0.9rem 0.7rem;
+            font-size: clamp(0.4rem, 2vw, 1.8rem);
+            margin-top: 1rem;
+            min-width: 200px;
+
+            &:hover {
+              background-color: white;
+              color: var(--indigo);
+            }
+          }
+        }
+      }
+
+      &:hover {
+        .overlay {
+          background-color: rgba(56, 40, 85, 0.9);
+          color: var(--indigo);
+          .middle {
+            opacity: 1 !important;
+          }
+        }
+      }
+    }
+
+    .asset-info {
+      padding: 0 1rem;
+    }
+
+    .asset-description {
+      padding: 0 1rem;
+    }
   }
 }

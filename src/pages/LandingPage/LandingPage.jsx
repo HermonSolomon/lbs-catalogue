@@ -57,18 +57,14 @@ const LandingPage = () => {
 
       <main>
         {/* Carousel */}
-        <ContentContainer
-          modifier="bg"
-          styleClass="content-container__container--1col carousel-section"
-        >
-          <div className="carousel-wrapper">
-            <Carousel breakPoints={breakPoints}>
-              {items.map((item) => (
-                <Item key={item} src={item} />
-              ))}
-            </Carousel>
-          </div>
-        </ContentContainer>
+
+        <div className="carousel-wrapper">
+          <Carousel breakPoints={breakPoints}>
+            {items.map((item) => (
+              <Item key={item} src={item} />
+            ))}
+          </Carousel>
+        </div>
 
         {/* Section */}
         <ContentContainer>
@@ -134,15 +130,13 @@ const LandingPage = () => {
         </ContentContainer>
 
         {/* Carousel */}
-        <ContentContainer styleClass="content-container__container--1col carousel-section">
-          <div className="carousel-wrapper">
-            <Carousel breakPoints={breakPoints}>
-              {items.map((item) => (
-                <Item key={item} src={item} />
-              ))}
-            </Carousel>
-          </div>
-        </ContentContainer>
+        <div className="carousel-wrapper">
+          <Carousel breakPoints={breakPoints}>
+            {items.map((item) => (
+              <Item key={item} src={item} />
+            ))}
+          </Carousel>
+        </div>
       </main>
     </>
   );

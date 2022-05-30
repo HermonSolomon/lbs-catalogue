@@ -5,10 +5,6 @@ import ContentContainer from "../../../layouts/ContentContainer/ContentContainer
 
 const CharactersLibrary = () => {
   const [items, setItems] = useState([]);
-
-  const API_URL_INTERACTIVES = "http://localhost:3500/interactives";
-  const API_URL_GRAPHICS = "http://localhost:3500/graphics";
-  const API_URL_VIDEOS = "http://localhost:3500/graphics";
   const API_URL_CHARACTERS = "http://localhost:3500/characters";
 
   useEffect(() => {
@@ -20,9 +16,9 @@ const CharactersLibrary = () => {
         const listItems = await response.json();
         setItems(listItems);
 
-        console.log(listItems.listItems.thumbnail);
+        console.log(listItems.listItems.id);
       } catch (err) {
-        console.log(err.stack);
+        // console.log(err.stack);
       }
     };
     fetchItems();
@@ -35,32 +31,39 @@ const CharactersLibrary = () => {
       </header>
 
       <ContentContainer>
-        <div className=" characters-page">
+        <div className="characters-page">
           {/* map through characters details */}
           {items.length ? (
-            items.map((item) => (
-              <div className="asset-div">
-                <li className="asset" key={item.id}>
-                  <div className="thumbnail-wrapper">
-                    <img src={item.thumbnail} alt="" />
-                  </div>
-                  <div className="asset-description">
-                    <h1>{item.name}</h1>
-                    <p>{item.description}</p>
-                    <p>Age: {item.age}</p>
+            items.map((item, index) => {
+              console.log();
+              return (
+                <div className="asset-div">
+                  <li className="asset" key={item.index}>
+                    <div className="thumbnail-wrapper">
+                      <img src={item.thumbnail} alt="" />
+                      <div className="overlay"></div>
+                    </div>
+                    <div className="asset-description">
+                      <h1>{item.name}</h1>
+                      <p>{item.description}</p>
+                      <p>Age: {item.age}</p>
 
-                    {/* map through keywords */}
-                    <ul className="tags">
-                      {item.keywords.map((keyword, i) => (
-                        <li className={`tag tag--color${i + 1}`} key={keyword}>
-                          {keyword}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </li>
-              </div>
-            ))
+                      {/* map through keywords */}
+                      <ul className="tags">
+                        {item.keywords.map((keyword, i) => (
+                          <li
+                            className={`tag tag--color${i + 1}`}
+                            key={keyword}
+                          >
+                            {keyword}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </li>
+                </div>
+              );
+            })
           ) : (
             <p style={{ marginTop: "2rem", textAlign: "center" }}>
               Your List is empty

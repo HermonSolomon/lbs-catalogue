@@ -1,0 +1,29 @@
+@use "../../../scss/abstract/index" as *;
+
+.selected-character {
+  width: 80%;
+  min-height: 100%;
+  border: #6154c7;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-left: 10%;
+  margin-right: 50%;
+
+  .character-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .character-image {
+    width: 20%;
+  }
+
+  .character-description {
+    display: inline-block;
+    position: relative;
+    width: 70%;
+    line-height: 1.5;
+    padding: 1rem;
+  }
+}
