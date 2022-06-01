@@ -1,9 +1,11 @@
-import axios from "axios";
 import React, { useState, useEffect } from "react";
 import NavBar from "../../../Components/NavBar/NavBar";
 import ContentContainer from "../../../layouts/ContentContainer/ContentContainer";
+import SearchField from "../../../Components/SearchBox/SearchField";
 
-const CharactersLibrary = () => {
+import { Link } from "react-router-dom";
+
+const CharactersLibrary = ({ search, filter }) => {
   const [items, setItems] = useState([]);
   const API_URL_CHARACTERS = "http://localhost:3500/characters";
 
@@ -30,15 +32,24 @@ const CharactersLibrary = () => {
         <NavBar />
       </header>
 
+      {/* Search input */}
+      <ContentContainer>
+        <SearchField search={search} filter={filter} />
+      </ContentContainer>
+
       <ContentContainer>
         <div className="characters-page">
           {/* map through characters details */}
           {items.length ? (
             items.map((item, index) => {
-              console.log();
+              console.log(item.id);
               return (
-                <div className="asset-div">
-                  <li className="asset" key={item.index}>
+                <Link
+                  className="asset-div"
+                  key={item.id}
+                  to={`/character-detail/${item.id}`}
+                >
+                  <li className="asset">
                     <div className="thumbnail-wrapper">
                       <img src={item.thumbnail} alt="" />
                       <div className="overlay"></div>
@@ -61,7 +72,7 @@ const CharactersLibrary = () => {
                       </ul>
                     </div>
                   </li>
-                </div>
+                </Link>
               );
             })
           ) : (

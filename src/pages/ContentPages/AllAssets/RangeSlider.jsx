@@ -3,53 +3,21 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 import axios from "axios";
 
-const RangeSlider = ({ min, max, onChange, assetList, setAssetList }) => {
-  const [minVal, setMinVal] = useState(min);
-  const [maxVal, setMaxVal] = useState(max);
+const RangeSlider = ({
+  min,
+  max,
+  assetList,
+  setAssetList,
+  setMinVal,
+  setMaxVal,
+  minVal,
+  maxVal,
+}) => {
   const minValRef = useRef(null);
   const maxValRef = useRef(null);
   const range = useRef(null);
 
   console.log(assetList);
-
-  // // API DATA
-  // const [assetList, setAssetList] = useState([]);
-  // const [search, setSearch] = useState("");
-
-  // const API_URL_INTERACTIVES = "http://localhost:3500/interactives";
-  // const API_URL_GRAPHICS = "http://localhost:3500/graphics";
-  // const API_URL_VIDEOS = "http://localhost:3500/videos";
-  // const API_URL_CHARACTERS = "http://localhost:3500/characters";
-  // const requestOne = axios.get(API_URL_INTERACTIVES);
-  // const requestTwo = axios.get(API_URL_GRAPHICS);
-  // const requestThree = axios.get(API_URL_VIDEOS);
-
-  // useEffect(() => {
-  //   axios
-  //     .all([requestOne, requestTwo, requestThree])
-  //     .then(
-  //       axios.spread((...responses) => {
-  //         const allAssets = [];
-
-  //         responses.forEach((response) => {
-  //           response.data.map((asset) => {
-  //             allAssets.push(asset);
-  //           });
-  //         });
-
-  //         const fetchedUrls = allAssets;
-  //         setAssetList(fetchedUrls);
-
-  //         // Need to store fetchedUrls to useState
-  //         // console.log(assetList);
-  //       })
-  //     )
-  //     .catch((errors) => {
-  //       // react on errors.
-  //       console.error(errors);
-  //     });
-  //   // setAssetList();
-  // }, []);
 
   // Convert to percentage
   const getPercent = useCallback(
@@ -83,9 +51,9 @@ const RangeSlider = ({ min, max, onChange, assetList, setAssetList }) => {
   }, [maxVal, getPercent]);
 
   // Get min and max values when their state changes
-  useEffect(() => {
-    onChange({ min: minVal, max: maxVal });
-  }, [minVal, maxVal, onChange]);
+  // useEffect(() => {
+  //   onChange({ min: minVal, max: maxVal });
+  // }, [minVal, maxVal, onChange]);
 
   return (
     <div className="slider-wrapper">

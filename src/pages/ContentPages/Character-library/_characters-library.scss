@@ -1,14 +1,18 @@
 @use "../../../scss/abstract/index" as *;
 
-.characters-page {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  margin: 0 auto;
-  max-width: 1100px;
+.characters-page,
+character-item {
+  @include media(tablet-l) {
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 auto;
+    max-width: 1100px;
+  }
 
   .asset-div {
     padding: 30px;
