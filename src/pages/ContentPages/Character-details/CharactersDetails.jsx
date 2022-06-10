@@ -3,12 +3,14 @@ import NavBar from "../../../Components/NavBar/NavBar";
 import ContentContainer from "../../../layouts/ContentContainer/ContentContainer";
 import CharacterExample from "../../../assets/Alex.svg";
 import { useParams } from "react-router-dom";
+import axios from "axios";
 
 const CharactersDetails = () => {
   const API_URL_CHARACTERS = "http://localhost:3500/characters";
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
+  const { id } = useParams();
 
   // Note: the empty deps array [] means
   // this useEffect will run once
@@ -30,7 +32,6 @@ const CharactersDetails = () => {
         }
       );
   }, []);
-  const { id } = useParams();
 
   if (error) {
     return <div>Error: {error.message}</div>;

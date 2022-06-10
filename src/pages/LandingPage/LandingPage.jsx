@@ -11,6 +11,10 @@ import ImgFour from "../../assets/carousel/img-1.png";
 import ImgFive from "../../assets/carousel/img-2.png";
 import ImgSix from "../../assets/carousel/img-3.png";
 import bannerBlob from "../../assets/global/avado_banner-blob.png";
+import MotionIcon from "../../assets/global/Mod_Icon.svg";
+import iDevsIcons from "../../assets/global/iDev_Icon.svg";
+import GraphicsIcon from "../../assets/global/GD_Icon.svg";
+import cornerDecor from "../../assets/global/corner-decor.svg";
 
 import Carousel from "react-elastic-carousel";
 import styled from "styled-components";
@@ -37,23 +41,41 @@ const LandingPage = () => {
         <NavBar />
       </header>
 
-      <div className="hero">
+      {/* <div className="hero">
         <div className="hero__container">
-          <ContentContainer styleClass="content-container__container--2col">
-            <h1 className="heading__primary">
-              Beutiful templates designed to fit any business
+          <ContentContainer className="content-container__container--2col">
+            <aside>
+              <h1 className="heading__primary">
+                Beutiful templates designed to fit any business
+              </h1>
               <CTAButton
                 modifier="primary"
                 text="View all Assets"
                 htmlTag="button"
               />
-            </h1>
+            </aside>
+            <aside>
+              <div className="blob">
+                <img src={heroPath} alt="" />
+              </div>
+            </aside>
           </ContentContainer>
-          <div className="blob">
-            <img src={heroPath} alt="" />
-          </div>
         </div>
-      </div>
+      </div> */}
+
+      <section className="landing">
+        <div className="landing-text">
+          <h1>More than just shorter links</h1>
+          <p>
+            Build your brand’s recognition and get detailed insights on how your
+            links are performing.
+          </p>
+          <CTAButton modifier="primary" text="All Assets" htmlTag="button" />
+        </div>
+        <div className="landing-image">
+          <img src={heroPath} />
+        </div>
+      </section>
 
       <main>
         {/* Carousel */}
@@ -101,11 +123,13 @@ const LandingPage = () => {
         {/* Section */}
         <ContentContainer
           modifier="bg"
-          styleClass="content-container__container--2col"
+          styleclassName="content-container__container--2col"
         >
           <div className="blob-second">
             <img src={bannerBlob} alt="" />
-            <div className="text-container text-container--1col">
+          </div>
+          <div className="content-container__container content-container__container--2col">
+            <div className="text-container text-container--1col text-float-left">
               <h3 className="heading--tertiary">
                 Underneath all of this are our values...
               </h3>
@@ -115,28 +139,50 @@ const LandingPage = () => {
                 ‘hard is soft, soft is hard’, human working environment.
               </p>
             </div>
-          </div>
-
-          <div className="text-container text-container--1col">
-            <h3 className="heading--tertiary">
-              Get to know each team’s project Development Process
-            </h3>
-            <div className="internal-team-boxes">
-              <div className="boxes box1"></div>
-              <div className="boxes box2"></div>
-              <div className="boxes box3"></div>
+            <div className="text-container text-container--1col">
+              <h3 className="heading--tertiary">
+                Get to know each team’s project Development Process
+              </h3>
+              <div className="internal-team-boxes">
+                <div className="boxes box1">
+                  <div className="card-img">
+                    <img src={MotionIcon} alt="" />
+                  </div>
+                  <div className="card-info">Lorem ipsum dolor sit.</div>
+                </div>
+                <div className="boxes box2">
+                  <div className="card-img">
+                    <img src={iDevsIcons} alt="" />
+                  </div>
+                  <div className="card-info">Lorem ipsum dolor sit.</div>
+                </div>
+                <div className="boxes box3">
+                  <div className="card-img">
+                    <img src={GraphicsIcon} alt="" />
+                  </div>
+                  <div className="card-info">Lorem ipsum dolor sit.</div>
+                </div>
+              </div>
             </div>
           </div>
         </ContentContainer>
 
         {/* Carousel */}
-        <div className="content-container__container carousel-wrapper">
-          <Carousel breakPoints={breakPoints}>
-            {items.map((item) => (
-              <Item key={item} src={item} />
-            ))}
-          </Carousel>
-        </div>
+        <ContentContainer modifier="gradient">
+          <div className="text-container text-container--1col text-container--white-bg">
+            <h2 className="heading--secondary">And the Values themselves...</h2>
+            <p style={{ marginBottom: "13rem" }}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              architecto dolorem! Fugit quod excepturi, error, reprehenderit
+              aliquam blanditiis illo dolores sit fuga, quasi tenetur molestiae
+              accusantium nisi quia aliquid unde facere doloremque.
+            </p>
+
+            <div className="corner-image">
+              <img src={cornerDecor} alt="" />
+            </div>
+          </div>
+        </ContentContainer>
       </main>
     </>
   );

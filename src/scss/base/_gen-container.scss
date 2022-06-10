@@ -22,12 +22,13 @@ body {
   }
 
   &--gradient {
-    background: rgb(240, 78, 152);
+    background: var(--indigo);
+    background: rgb(69, 56, 120);
     background: linear-gradient(
-      0deg,
-      rgba(240, 78, 152, 1) 0%,
-      rgba(247, 127, 126, 1) 50%,
-      rgba(255, 183, 98, 1) 100%
+      90deg,
+      rgba(69, 56, 120, 1) 0%,
+      rgba(97, 84, 199, 1) 35%,
+      rgba(153, 135, 255, 1) 100%
     );
   }
 
