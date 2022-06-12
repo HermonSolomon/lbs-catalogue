@@ -52,3 +52,38 @@
     }
   }
 }
+
+.toggles {
+  .tabs {
+    border-bottom: 1px solid grey;
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    line-height: 36px;
+    margin: 0 auto;
+    max-width: 1080px;
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      display: inline-block;
+      cursor: pointer;
+      color: var(--indigo);
+      padding: 5px 45px;
+
+      :first-child {
+        margin-left: 10px;
+      }
+    }
+
+    .active-tab {
+      border-radius: 5px 5px 0px 0px;
+      /* border-bottom: none; */
+      position: relative;
+      color: white;
+      background-color: var(--indigo);
+    }
+  }
+}

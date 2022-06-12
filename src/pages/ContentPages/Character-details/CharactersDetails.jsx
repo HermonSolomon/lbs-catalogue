@@ -7,10 +7,16 @@ import axios from "axios";
 
 const CharactersDetails = () => {
   const API_URL_CHARACTERS = "http://localhost:3500/characters";
+
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
   const { id } = useParams();
+  const [activeTab, setActiveTab] = useState(false);
+
+  // handleToggle
+
+  const onToggle = () => setActiveTab(!activeTab);
 
   // Note: the empty deps array [] means
   // this useEffect will run once
@@ -89,6 +95,61 @@ const CharactersDetails = () => {
               </div>
             </div>
           </div>
+        </ContentContainer>
+
+        <ContentContainer>
+          <section class="asset-tabs">
+            <div class="toggles">
+              <ul class="tabs">
+                <li
+                  class={activeTab ? "active-tab" : "tab-item tabitem-inactive"}
+                  onClick={onToggle}
+                >
+                  Assets with Jane
+                </li>
+                <li
+                  class={activeTab ? "active-tab" : "tab-item tabitem-inactive"}
+                  onClick={onToggle}
+                >
+                  History
+                </li>
+              </ul>
+            </div>
+
+            {/* Tabs Content*/}
+            <div className="tabs-content">
+              <div className="asset-list">
+                {items.map((item) => {
+                  return (
+                    <div className="result-items" key={item.id}>
+                      <div className="thumbnail">
+                        <div className="thumb-img">
+                          <img
+                            className="img-responsive"
+                            src={item.thumbnail}
+                            alt=""
+                          />
+                        </div>
+                        <div className="overlay">
+                          <div className="middle">
+                            <button className="btn btn-secondary view-btn">
+                              View Asset
+                            </button>
+                            <button className="btn btn-secondary download-btn">
+                              Download
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <h3 className="asset-info">{item.title}</h3>
+                      <p className="asset-description">{item.description}</p>
+                    </div>
+                  );
+                })}
+              </div>
+              <div className="assets-history"></div>
+            </div>
+          </section>
         </ContentContainer>
       </>
     );
