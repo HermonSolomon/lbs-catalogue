@@ -13,12 +13,11 @@ body {
   width: 100%;
 
   &--bg {
-    // background-image: url("../../assets/imgs/culture-page/hermonback.png");
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size: cover;
-    background-color: #ededf5;
-    padding: 10em;
+    padding: clamp(2rem, 3vw, 5rem);
+    @include media(tablet-l) {
+      background-color: #ededf5;
+      padding: 10em;
+    }
   }
 
   &--gradient {
